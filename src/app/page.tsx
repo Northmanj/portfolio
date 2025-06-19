@@ -129,7 +129,7 @@ export default function Home() {
             <h2 className="text-4xl font-bold mb-8">Get In Touch</h2>
             <div className="bg-white/5 p-8 rounded-xl backdrop-blur-sm">
               <form 
-  action="https://formspree.io/f/xyzwazqb" 
+   action="https://formspree.io/f/xyzwazqb" 
   method="POST" 
   className="space-y-6 text-white"
 >
