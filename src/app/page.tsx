@@ -1,4 +1,4 @@
-'use client';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FiGithub, FiLinkedin, FiMail, FiInstagram, FiPhone } from 'react-icons/fi';
 import Navbar from '@/components/Navbar';
@@ -48,7 +48,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50" />
         </div>
-        <img
+        <Image
       src="/images/gregory.jpg" // actual logo pedding
       alt="Gregory Image"
       className="h-100 w-100 mb-4"
