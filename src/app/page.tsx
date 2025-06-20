@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { FiGithub, FiLinkedin, FiMail, FiInstagram, FiPhone } from 'react-icons/fi';
 import Navbar from '@/components/Navbar';
 import React from 'react';
-import { useState } from 'react';
+
 import Projects from '@/components/Projects';
 import WhatsAppPop from '@/components/WhatsAppPop';
 
@@ -116,7 +116,7 @@ export default function Home() {
               {projects.map((project, index) => (
                 <motion.div key={index} className="bg-white/5 rounded-xl overflow-hidden" whileHover={{ y: -10 }}>
                   <div className="h-48 bg-gray-700 overflow-hidden">
-                    <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                    <Image src={project.image} alt={project.title} className="w-full h-full object-cover" />
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
