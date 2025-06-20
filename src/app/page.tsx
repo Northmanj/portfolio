@@ -4,6 +4,9 @@ import { FiGithub, FiLinkedin, FiMail, FiInstagram, FiPhone } from 'react-icons/
 import Navbar from '@/components/Navbar';
 import React from 'react';
 import { useState } from 'react';
+import Projects from '@/components/Projects';
+import WhatsAppPop from '@/components/WhatsAppPop';
+
 
 export default function Home() {
   const [isMounted, setIsMounted] = React.useState(false);
@@ -32,20 +35,26 @@ export default function Home() {
       demo: "https://github.com/Northmanj/",
       code: "https://github.com/Northmanj/",
     },
+    
   ];
   
   
   return (
     <main className="min-h-screen">
       <Navbar />
-
+      <WhatsAppPop />
       {/* Hero Section */}
       <section id="home" className="h-screen flex items-center justify-center relative">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50" />
         </div>
+        <img
+      src="/images/gregory.jpg" // actual logo pedding
+      alt="Gregory Image"
+      className="h-100 w-100 mb-4"
+    />
         <motion.div className="text-center z-10" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <h1 className="text-5xl md:text-7xl font-bold mb-4">Hi, I'm <span className="text-blue-400">Gregory John Oundo</span></h1>
+          <h1 className="text-5xl md:text-7xl font-bold mb-4">Hello, I am <span className="text-blue-400">Gregory John Oundo</span></h1>
           <p className="text-xl md:text-2xl mb-8">Full Stack Developer & Designer</p>
           <div className="flex space-x-4 justify-center">
             <motion.a href="https://github.com/Northmanj" target="_blank" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="p-3 bg-white/10 rounded-full backdrop-blur-sm"><FiGithub size={24} /></motion.a>
@@ -95,9 +104,10 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
+      <Projects/>
       {/* Projects Section */}
       <section id="projects" className="min-h-screen py-20 bg-black/80">
+      
         <div className="max-w-6xl mx-auto px-4">
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }}>
             <h2 className="text-4xl font-bold mb-12">Projects</h2>
