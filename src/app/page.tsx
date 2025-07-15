@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import CvGenerator from '@/components/CvGenerator';
 import {
   FiGithub,
   FiLinkedin,
@@ -111,6 +112,7 @@ export default function Home() {
 
       {/* Projects Section */}
       <Projects projects={projects} />
+      <CvGenerator/>
 
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-black/90">
